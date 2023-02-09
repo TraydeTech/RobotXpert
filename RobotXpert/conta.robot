@@ -1,14 +1,37 @@
 *** Settings ***
+Documentation       Suite para teste a classe ContaLibray
 
-Documentation    Suite para teste a classe ContaLibray
-
-Library            ContaLibrary.py
+Library             ContaLibrary.py
 
 *** Test Cases ***
 Quando abro uma nova conta deve retornar saldo ZERADO
     Abrir Conta
 
-    ${saldo_final}    Obter Saldo
+    ${saldo_final}       Obter Saldo
     ${saldo_esperado}    Convert To Number    0.0
 
-   Should Be Equal    ${saldo_final}    ${saldo_esperado}
+    Should Be Equal      ${saldo_final}    ${saldo_esperado}
+
+Quando faço um deposito deve refletir o valor no meu saldo
+    Abrir Conta
+
+    ${valor_deposito}    Convert To Number    100
+    Deposita             ${valor_deposito}
+
+    ${saldo_final}        Obter Saldo
+
+   Should Be Equal        ${saldo_final}    ${valor_deposito}
+
+Qaundo eu faco um saque deduzir o valor do meu saldo
+    Abrir Conta
+
+    ${valor_deposito}       Convert To Number    2000
+    Deposita                ${valor_deposito}
+
+    ${valor_saque}          Convert To Number    200
+    Saca                    ${valor_saque}
+    
+    ${saldo_esperado}       Evaluate          ${valor_deposito} - ${valor_saque} - 2
+    ${saldo_final}          Obter Saldo
+
+    Should Be Equal         ${saldo_final}    ${saldo_esperado}
