@@ -1,53 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on darwin)" generated="20230209 16:14:12.472" rpa="false" schemaversion="3">
-<suite id="s1" name="Variaveis" source="/Users/trayde/Documents/Programacao/Robot Xpert Full Stack/RobotXpert/variaveis.robot">
-<test id="s1-t1" name="Exemplo 01" line="12">
-<kw name="Obter Nome" library="nome">
-<var>${nome}</var>
-<msg timestamp="20230209 16:14:12.514" level="INFO">${nome} = Trayde</msg>
-<status status="PASS" starttime="20230209 16:14:12.513" endtime="20230209 16:14:12.515"/>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on darwin)" generated="20230209 17:48:53.628" rpa="false" schemaversion="3">
+<suite id="s1" name="Listas" source="/Users/trayde/Documents/Programacao/Robot Xpert Full Stack/listas.robot">
+<test id="s1-t1" name="Minha Lista" line="12">
+<kw name="Combine Lists" library="Collections">
+<var>${crossower}</var>
+<arg>${AVENGERS}</arg>
+<arg>${JUSTICE}</arg>
+<doc>Combines the given ``lists`` together and returns the result.</doc>
+<msg timestamp="20230209 17:48:53.669" level="INFO">${crossower} = ['Thot', 'Hulk', 'Ironman', 'Cap', 'Superman', 'Wonder Woman', 'Batman', 'Arrow']</msg>
+<status status="PASS" starttime="20230209 17:48:53.668" endtime="20230209 17:48:53.670"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${nome}</arg>
+<arg>${crossower}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230209 16:14:12.515" endtime="20230209 16:14:12.515"/>
+<status status="PASS" starttime="20230209 17:48:53.670" endtime="20230209 17:48:53.671"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${APELIDO}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230209 16:14:12.516" endtime="20230209 16:14:12.516"/>
-</kw>
-<status status="PASS" starttime="20230209 16:14:12.513" endtime="20230209 16:14:12.516"/>
+<status status="PASS" starttime="20230209 17:48:53.666" endtime="20230209 17:48:53.671"/>
 </test>
-<test id="s1-t2" name="Exemplo 02" line="21">
-<kw name="Obter Nome" library="nome">
-<var>${nome}</var>
-<msg timestamp="20230209 16:14:12.520" level="INFO">${nome} = Trayde</msg>
-<status status="PASS" starttime="20230209 16:14:12.517" endtime="20230209 16:14:12.520"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${nome}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230209 16:14:12.521" endtime="20230209 16:14:12.521"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${APELIDO}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230209 16:14:12.521" endtime="20230209 16:14:12.522"/>
-</kw>
-<status status="PASS" starttime="20230209 16:14:12.517" endtime="20230209 16:14:12.522"/>
-</test>
-<doc>Exemplos de Variávesis</doc>
-<status status="PASS" starttime="20230209 16:14:12.477" endtime="20230209 16:14:12.522"/>
+<doc>Conhecento as Listas</doc>
+<status status="PASS" starttime="20230209 17:48:53.633" endtime="20230209 17:48:53.671"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Variaveis">Variaveis</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Listas">Listas</stat>
 </suite>
 </statistics>
 <errors>

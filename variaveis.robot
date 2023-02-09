@@ -18,5 +18,5 @@ Exemplo 01
 
 Exemplo 02
 
-    Log To Console    ${nome}
+    #Log To Console    ${nome}
     Log To Console    ${APELIDO}
